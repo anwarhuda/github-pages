@@ -1,0 +1,155 @@
+@import "../assets/sass/lib/lib";
+
+.nav-tabs{
+    @include NoBorder();
+}
+.navbar-head {
+    @include NoPadding();
+}
+.navbar-brand{
+    @include MarginRight(1.5rem);
+}
+.nav-link{
+    @include FontSize(14px);
+    @include FontColor($white-color !important);
+    cursor: pointer;
+    &:hover{
+        color: aqua !important;
+    }
+}
+
+.nav-link-facebook{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #507CBE !important;
+    }
+}
+.nav-link-twitter{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #63CDF1 !important;
+    }
+}
+.nav-link-instagram{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: rgb(236, 39, 177) !important;
+    }
+}
+.nav-link-google-plus{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #F16261 !important;
+    }
+}
+.nav-link-youtube{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #c70017 !important;
+    }
+}
+.social-group{
+    @include FontSize(20px);
+}
+.nav-link-head{
+    @include NoPadding();
+}
+.bg-blue-900{
+    @include FontColor($white-color);
+    @include BackgroundColor($blue-color-900);
+}
+.bg-blue-800{
+    @include FontColor($white-color);
+    @include BackgroundColor($blue-color-800);
+}
+.border{
+    @include Border('all', solid, $primary-color);
+    @include BorderRadius(4px 4px);
+}
+.no-border{
+    @include NoBorder();
+}
+
+@media (max-width: 575px){
+    .container-no-margin{
+        @include NoMargin();
+        max-width: 575px;
+    }
+    .menu-top-no-mobile{
+        display: none;
+    }
+    .menu-top-mobile{
+        display: inherit;
+    }
+    .navbar-margin-top{
+        margin-top: 44px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container-no-margin{
+        @include NoMargin();
+        max-width: 767px;
+    }
+    .menu-top-no-mobile{
+        display: none;
+    }
+    .menu-top-mobile{
+        display: inherit;
+    }
+    .navbar-margin-top{
+        margin-top: 44px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-top-no-mobile{
+        display: inherit;
+    }
+    .menu-top-mobile{
+        display: none;
+    }
+    .navbar-margin-top{
+        margin-top: 62px;
+    }
+    .container-head-menu{
+        height: 46px !important;
+    }
+    .navbar-margin-top{
+        margin-top: 44px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .menu-top-no-mobile{
+        display: inherit;
+    }
+    .menu-top-mobile{
+        display: none;
+    }
+    .navbar-margin-top{
+        margin-top: 62px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-top-no-mobile{
+        display: inherit;
+    }
+    .menu-top-mobile{
+        display: none;
+    }
+    .navbar-margin-top{
+        margin-top: 62px;
+    }
+}

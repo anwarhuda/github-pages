@@ -1,0 +1,29 @@
+// Box Shadow Function
+@mixin NoBoxShadow() {
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+	-moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+	-ms-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+	-o-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+}
+@mixin BoxShadow($args) {
+	box-shadow: $args;
+	-webkit-box-shadow: $args;
+	-moz-box-shadow: $args;
+	-ms-box-shadow: $args;
+	-o-box-shadow: $args;
+}
+@mixin BoxShadow2Args($args1, $args_2) {
+	box-shadow: $args1, $args_2;
+	-webkit-box-shadow: $args1, $args_2;
+	-moz-box-shadow: $args1, $args_2;
+	-ms-box-shadow: $args1, $args_2;
+	-o-box-shadow: $args1, $args_2;
+}
+@mixin BoxShadow3Args($args1, $args_2, $args_3) {
+	box-shadow: $args1, $args_2, $args_3;
+	-webkit-box-shadow: $args1, $args_2, $args_3;
+	-moz-box-shadow: $args1, $args_2, $args_3;
+	-ms-box-shadow:$args1, $args_2, $args_3;
+	-o-box-shadow:$args1, $args_2, $args_3;
+}

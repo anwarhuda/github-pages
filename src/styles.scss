@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/sass/lib/lib";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    @include NoMargin();
+    @include NoPadding();
+    @include Font('roboto');
+}
+
+input {
+    &:not([type]), &[type=text], &[type=password], &[type=email], &[type=url],
+    &[type=time], &[type=date], &[type=datetime], &[type=datetime-local],
+    &[type=tel], &[type=number], &[type=search]  {
+        @include NoMargin();
+
+        &:focus:not([readonly]) {
+            @include NoBoxShadow();
+            @include BorderBottom('all', solid, $primary-color);
+
+            &+label{
+                @include FontColor($primary-color);
+            }
+        }
+    }
+
+    &[type="checkbox"] {
+        &.filled-in {
+            &:checked {
+                &+label {
+                    &:after {
+                        @include BackgroundColor($primary-color);
+                        @include Border('all', solid, $primary-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+button{
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 575px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

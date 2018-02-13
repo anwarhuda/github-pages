@@ -1,0 +1,54 @@
+// Border Function
+@mixin NoBorder() {
+    border: 0px !important;
+}
+
+@mixin Border($args, $type, $color) {
+    @include BorderSelect(all, $args $type $color);
+}
+@mixin BorderLeft($args, $type, $color) {
+    @include BorderSelect(left, $args $type $color);
+}
+@mixin BorderRight($args, $type, $color) {
+    @include BorderSelect(right, $args $type $color);
+}
+@mixin BorderTop($args, $type, $color) {
+    @include BorderSelect(top, $args $type $color);
+}
+@mixin BorderBottom($args, $type, $color) {
+    @include BorderSelect(bottom, $args $type $color);
+}
+@mixin BorderSelect($type, $data) {
+	@if($type == 'all'){
+		border: $data;
+	}
+	@if($type == 'left'){
+		border-left: $data;
+	}
+	@if($type == 'right'){
+		border-right: $data;
+	}
+	@if($type == 'top'){
+		border-top: $data;
+	}
+	@if($type == 'bottom'){
+		border-bottom: $data;
+	}
+}
+
+// Border Radius
+@mixin BorderRadius($args) {
+	border-radius: $args;
+}
+@mixin BorderBlRadius($args) {
+	border-bottom-left-radius: $args;
+}
+@mixin BorderBrRadius($args) {
+	border-bottom-right-radius: $args;
+}
+@mixin BorderTlRadius($args) {
+	border-top-left-radius: $args;
+}
+@mixin BorderTrRadius($args) {
+	border-top-right-radius: $args;
+}

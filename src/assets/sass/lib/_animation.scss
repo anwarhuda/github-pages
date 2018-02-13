@@ -1,0 +1,75 @@
+// Animation Function
+
+// Multiple Argument
+@mixin Animation($name, $delay:0s, $direction:normal, $duration:0, $fill:'forwards', $iteration:1, $play:'running', $timing:ease) {
+    animation: $name $delay $direction $duration $fill $iteration $play $timing;
+    -webkit-animation: $name $delay $direction $duration $fill $iteration $play $timing;
+    -moz-animation: $name $delay $direction $duration $fill $iteration $play $timing;
+    -ms-animation: $name $delay $direction $duration $fill $iteration $play $timing;
+    -o-animation: $name $delay $direction $duration $fill $iteration $play $timing;
+}
+
+// Single Argument
+@mixin AnimationName($name) {
+    animation-name: $name;
+    -webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -ms-animation-name: $name;
+    -o-animation-name: $name;
+}
+
+@mixin AnimationDelay($delay:0s) {
+    animation-delay: $delay;
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -ms-animation-delay: $delay;
+    -o-animation-delay: $delay;
+}
+
+@mixin AnimationDirection($direction:normal) {
+    animation-direction: $direction;
+    -webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -ms-animation-direction: $direction;
+    -o-animation-direction: $direction    
+}
+
+@mixin AnimationDuration($duration:0) {
+    animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -ms-animation-duration: $duration;
+    -o-animation-duration: $duration;
+}
+
+@mixin AnimationFillMode($fill:0) {
+    animation-fill-mode: $fill;
+    -webkit-animation-fill-mode: $fill;
+    -moz-animation-fill-mode: $fill;
+    -ms-animation-fill-mode: $fill;
+    -o-animation-fill-mode: $fill;
+}
+
+@mixin AnimationIteration($iteration:1) {
+    animation-iteration-count: $iteration;
+    -webkit-animation-iteration-count: $iteration;
+    -moz-animation-iteration-count: $iteration;
+    -ms-animation-iteration-count: $iteration;
+    -o-animation-iteration-count: $iteration;
+}
+
+@mixin AnimationPlayState($play:running) {
+    animation-play-state: $play;
+    -webkit-animation-play-state: $play;
+    -moz-animation-play-state: $play;
+    -ms-animation-play-state: $play;
+    -o-animation-play-state: $play;
+}
+
+@mixin AnimationTiming($timing:ease) {
+    animation-timing-function: $timing;
+    -webkit-animation-timing-function: $timing;
+    -moz-animation-timing-function: $timing;
+    -ms-animation-timing-function: $timing;
+    -o-animation-timing-function: $timing;
+}

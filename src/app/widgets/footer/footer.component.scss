@@ -1,0 +1,136 @@
+@import "../../../assets/sass/lib/lib";
+
+button, .form-control, .btn-primary:not(:disabled):not(.disabled):active:focus{
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px;
+    }
+    &:active {
+        outline: none;
+        box-shadow: 0px 0px;
+    }
+}
+.no-border-radius{
+    @include BorderRadius(0px);
+}
+.margin-top{
+    @include MarginTop(15px !important);
+    @include PaddingTop(15px);
+}
+.no-padding{
+    @include NoPadding();
+}
+.bg-blue-900{
+    @include FontColor($white-color);
+    @include BackgroundColor($blue-color-900);
+}
+.bg-blue-800{
+    @include FontColor($white-color);
+    @include BackgroundColor($blue-color-800);
+}
+.social-group{
+    @include FontSize(20px);
+}
+.nav-link-facebook{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #507CBE !important;
+    }
+}
+.nav-link-twitter{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #63CDF1 !important;
+    }
+}
+.nav-link-instagram{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: rgb(236, 39, 177) !important;
+    }
+}
+.nav-link-google-plus{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #F16261 !important;
+    }
+}
+.nav-link-youtube{
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #c70017 !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .copyright{
+        @include Padding(0.5rem 0px !important);
+        list-style:none; 
+        height:18px;
+    }
+    .center-text{
+        text-align: center;
+    }
+    .justify-content-center{
+        @include NoPadding()
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .copyright{
+        @include Padding(0.5rem 0px !important);
+        position:absolute; 
+        list-style:none; 
+        height:18px;
+        width: 230px !important;
+    }
+    .justify-content-center{
+        @include NoPadding()
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .copyright{
+        @include Padding(0.5rem 0px !important);
+        position:absolute; 
+        list-style:none; 
+        height:18px;
+        width: 230px !important;
+    }
+    .justify-content-end{
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .copyright{
+        @include Padding(0.5rem 0px !important);
+        position:absolute; 
+        list-style:none; 
+        height:18px;
+        width: 230px !important;
+    }
+    .justify-content-end{
+    }
+}
+
+@media (min-width: 1200px) {
+    .copyright{
+        @include Padding(0.5rem 0px !important);
+        position:absolute; 
+        list-style:none; 
+        height:18px;
+        width: 230px !important;
+    }
+    .justify-content-end{
+    }
+}

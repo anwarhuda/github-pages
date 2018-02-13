@@ -1,0 +1,50 @@
+// Padding Function
+@mixin NoPadding($args:all) {
+    @include PaddingSelect($args, 0px);	
+}
+
+@mixin Padding($value) {
+    padding: $value;
+}
+@mixin PaddingTop($value) {
+    padding-top: $value;
+}
+@mixin PaddingRight($value) {
+    padding-right: $value;
+}
+@mixin PaddingBottom($value) {
+    padding-bottom: $value;
+}
+@mixin PaddingLeft($value) {
+    padding-left: $value;
+}
+
+// Important Padding
+@mixin PaddingSelect($args, $value) {
+    @if($args == "top") {
+    	padding-top: $value !important;
+    }
+    @else if($args == "right") {
+    	padding-right: $value !important;
+    }
+    @else if($args == "bottom") {
+    	padding-bottom: $value !important;
+    }
+    @else if($args == "left") {
+    	padding-left: $value !important;
+    }
+    @else {
+        padding: $value !important;
+    }
+}
+
+// Multple Padding
+@mixin Padding2Args($value1, $value2) {
+    padding: $value1 $value2;
+}
+@mixin Padding3Args($value1, $value2, $value3) {
+    padding: $value1 $value2 $value3;
+}
+@mixin Padding4Args($value1, $value2, $value3, $value4) {
+    padding: $value1 $value2 $value3 $value4;
+}

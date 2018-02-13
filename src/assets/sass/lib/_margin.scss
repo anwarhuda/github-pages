@@ -1,0 +1,50 @@
+// Margin Function
+@mixin NoMargin($args:all) {
+    @include MarginSelect($args, 0px);	
+}
+
+@mixin Margin($value) {
+    margin: $value;
+}
+@mixin MarginTop($value) {
+    margin-top: $value;
+}
+@mixin MarginRight($value) {
+    margin-right: $value;
+}
+@mixin MarginBottom($value) {
+    margin-bottom: $value;
+}
+@mixin MarginLeft($value) {
+    margin-left: $value;
+}
+
+// Important Margin
+@mixin MarginSelect($args, $value) {
+    @if($args == "top") {
+    	margin-top: $value !important;
+    }
+    @else if($args == "right") {
+    	margin-right: $value !important;
+    }
+    @else if($args == "bottom") {
+    	margin-bottom: $value !important;
+    }
+    @else if($args == "left") {
+    	margin-left: $value !important;
+    }
+    @else {
+        margin: $value !important;
+    }
+}
+
+// Multple Margin
+@mixin Margin2Args($value1, $value2) {
+    margin: $value1 $value2;
+}
+@mixin Margin3Args($value1, $value2, $value3) {
+    margin: $value1 $value2 $value3;
+}
+@mixin Margin4Args($value1, $value2, $value3, $value4) {
+    margin: $value1 $value2 $value3 $value4;
+}

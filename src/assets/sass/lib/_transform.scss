@@ -1,0 +1,77 @@
+// Transform Function
+@mixin Transform($args) {
+    transform: $args;
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+}
+@mixin Transform2Args($args1, $args2) {
+    transform: $args1 $args2;
+    -webkit-transform: $args1 $args2;
+    -moz-transform: $args1 $args2;
+    -ms-transform: $args1 $args2;
+    -o-transform: $args1 $args2;    
+}
+@mixin Transform3Args($args1, $args2, $args3) {
+    transform: $args1 $args2, $args3;
+    -webkit-transform: $args1 $args2, $args3;
+    -moz-transform: $args1 $args2, $args3;
+    -ms-transform: $args1 $args2, $args3;
+    -o-transform: $args1 $args2, $args3;
+}
+@mixin Transform4Args($args1, $args2, $args3, $args4) {
+    transform: $args1 $args2, $args3, $args4;
+    -webkit-transform: $args1 $args2, $args3, $args4;
+    -moz-transform: $args1 $args2, $args3, $args4;
+    -ms-transform: $args1 $args2, $args3, $args4;
+    -o-transform: $args1 $args2, $args3, $args4;
+}
+@mixin TransformOrigin($args) {
+    transform-origin: $args;
+    -webkit-transform-origin: $args;
+    -moz-transform-origin: $args;
+    -ms-transform-origin: $args;
+    -o-transform-origin: $args;    
+}
+@mixin TransformStyle($style) {
+    transform-style: $style;
+    -webkit-transform-style: $style;
+    -moz-transform-style: $style;
+    -ms-transform-style: $style;
+    -o-transform-style: $style;
+}
+
+@mixin Perspective($value:0px) {
+    @include Transform(perspective($value));
+}
+@mixin Rotate($deg:45deg) {
+    @include Transform(rotate($deg));
+}
+@mixin RotateX($deg:45deg) {
+    @include Transform(rotateX($deg));
+}
+@mixin RotateY($deg:45deg) {
+    @include Transform(rotateY($deg));
+}
+@mixin RotateZ($deg:45deg) {
+    @include Transform(rotateZ($deg));
+}
+@mixin Scale($factor:.5) {
+    @include Transform(scale($factor));
+}
+@mixin Translate($x,$y) {
+    @include Transform(translate($x,$y));
+}
+@mixin TranslateX($x) {
+    @include Transform(translateX($x));
+}
+@mixin TranslateY($x) {
+    @include Transform(translateY($x));
+}
+@mixin TranslateZ($x) {
+    @include Transform(translateZ($x));
+}
+@mixin Translate3d($x,$y,$z) {
+    @include Transform(translate3d($x,$y,$z));
+}

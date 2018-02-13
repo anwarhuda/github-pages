@@ -1,0 +1,68 @@
+$font-family-primary: "Helvetica Neue", sans-serif;
+$font-color-primary: #000;
+
+// Multiple Font Argument
+@mixin Font($family:"default", $size:"default", $weight:"default", $style:"default", $color:"default"){
+  @if $family == "default" {
+    font-family : $font-family-primary;
+  }
+  @else{
+    font-family : $family;
+  }
+
+  @if $size == "default" {
+    font-size : 12px;
+  }
+  @else{
+    font-size : $size;
+  }
+
+  @if $weight == "default" {
+    font-weight : normal;
+  } 
+  @else{
+    font-weight : $weight;
+  }
+
+  @if $style == "default" {
+    font-style : normal;
+  }  
+  @else{
+    font-style : $style;
+  }
+
+  @if $color == "default" {
+    color : $black-color-primary;
+  }  
+  @else{
+    color : $color;
+  }
+}
+
+// Single Font Argument
+@mixin FontFamily($args) {
+  font-family : $args;
+}
+@mixin FontSize($args) {
+  font-size : $args;
+}
+@mixin FontWeight($args) {
+  font-weight : $args;
+}
+@mixin FontStyle($args) {
+  font-style : $args;
+}
+@mixin FontColor($args) {
+  color : $args;
+}
+
+// Text Shadow
+@mixin TextShadow($args1) {
+  text-shadow: $args1;
+}
+@mixin TextShadow2($args, $args_2) {
+  text-shadow: $args1, $args_2;
+}
+@mixin TextShadow3($args, $args_2, $args_3) {
+  text-shadow: $args1, $args_2, $args_3;
+}

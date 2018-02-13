@@ -1,0 +1,75 @@
+// Keyframse Animation Function
+@mixin KeyFramesSelect($type, $name, $PropertyFrom, $ValueFrom, $PropertyTo, $ValueTo) {
+    @if($type == "webkit") {
+    	@-webkit-keyframes #{$name} {
+            from {
+                @each $value in $ValueFrom {
+                    $key: index($ValueFrom, $value);
+                    $property: nth($PropertyFrom, $key);
+                    #{$property}: $value;
+                }
+            }
+            to {
+                @each $value in $ValueTo {
+                    $key: index($ValueTo, $value);
+                    $property: nth($PropertyTo, $key);
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+    @else if($type == "moz") {
+    	@-moz-keyframes #{$name} {
+            from {
+                @each $value in $ValueFrom {
+                    $key: index($ValueFrom, $value);
+                    $property: nth($PropertyFrom, $key);
+                    #{$property}: $value;
+                }
+            }
+            to {
+                @each $value in $ValueTo {
+                    $key: index($ValueTo, $value);
+                    $property: nth($PropertyTo, $key);
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+    @else if($type == "ms") {
+    	@-ms-keyframes #{$name} {
+            from {
+                @each $value in $ValueFrom {
+                    $key: index($ValueFrom, $value);
+                    $property: nth($PropertyFrom, $key);
+                    #{$property}: $value;
+                }
+            }
+            to {
+                @each $value in $ValueTo {
+                    $key: index($ValueTo, $value);
+                    $property: nth($PropertyTo, $key);
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+    @else if($type == "o") {
+    	@-o-keyframes #{$name} {
+            from {
+                @each $value in $ValueFrom {
+                    $key: index($ValueFrom, $value);
+                    $property: nth($PropertyFrom, $key);
+                    #{$property}: $value;
+                }
+            }
+            to {
+                @each $value in $ValueTo {
+                    $key: index($ValueTo, $value);
+                    $property: nth($PropertyTo, $key);
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+}

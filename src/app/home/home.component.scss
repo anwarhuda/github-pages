@@ -1,0 +1,140 @@
+@import "../../assets/sass/lib/lib";
+
+.tab-post{
+    height: 366px;
+}
+.nav-link{
+    @include FontColor($white-color !important);
+    @include BorderRadius(0px);
+    height: 50px;
+    cursor: pointer;
+}
+.card{
+    @include BorderRadius(0px);
+}
+.bg-blue-800{
+    @include FontColor($white-color);
+    @include BackgroundColor($blue-color-800);
+}
+.padding{
+    @include Padding(1rem !important);
+}
+.padding-card-header{
+    @include Padding(1px !important);
+}
+.no-padding{
+    @include NoPadding();
+}
+.no-padding-top-bottom{
+    @include PaddingTop(0px);
+    @include PaddingBottom(0px);
+}
+.no-border{
+    @include NoBorder();
+}
+.default-cursor{
+    cursor: default;
+}
+.button-margin-top{
+    @include MarginTop(15px);
+}
+.list-group-item{
+    @include NoBorder();
+    @include BorderTop(1px, solid, #cecece !important);
+    @include BorderBottom(1px, solid, #cecece !important);
+}
+.no-border-radius{
+    @include BorderRadius(0px);
+}
+.width-100{
+    width: 100%;
+}
+.list-group-item{
+    &:first-child{
+        @include BorderRadius(0px);
+    }
+    &:last-child{
+        @include BorderRadius(0px);
+    }
+}
+
+@media (max-width: 575px) {
+    .container-no-margin{
+        @include NoMargin();
+        max-width: 575px;
+    }
+    .margin-top{
+        @include MarginTop(15px);
+    }
+    .margin-top-col{
+        @include MarginTop(15px);
+    }
+    .carousel-home{
+        height: 200px;
+    }
+    .carousel-item{
+        img{
+            height: 200px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container-no-margin{
+        @include NoMargin();
+        max-width: 767px;
+    }
+    .margin-top{
+        @include MarginTop(15px);
+    }
+    .carousel-home{
+        height: 300px;
+    }
+    .carousel-item{
+        img{
+            height: 200px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .margin-top{
+        @include MarginTop(15px);
+    }
+    .carousel-home{
+        height: 366px;
+    }
+    .carousel-item{
+        img{
+            height: 366px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .margin-top{
+        @include MarginTop(15px);
+    }
+    .carousel-home{
+        height: 366px;
+    }
+    .carousel-item{
+        img{
+            height: 366px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .margin-top{
+        @include MarginTop(15px);
+    }
+    .carousel-home{
+        height: 366px;
+    }
+    .carousel-item{
+        img{
+            height: 366px;
+        }
+    }
+}

@@ -6,6 +6,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Devloying To Github pages
+
+`npm install -g angular-cli-ghpages`
+
+`ng build --prod --base-href "https://<user-name>.github.io/<repo>/"`
+
+`ngh`
+
+`ngh --message="First deploy"`
+
+`ngh --branch=production`
+
+`ngh --dry-run`
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.

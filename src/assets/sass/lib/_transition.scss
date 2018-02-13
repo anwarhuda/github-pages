@@ -1,0 +1,43 @@
+// Transition Function
+@mixin NoTransition() {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+@mixin Transition($args, $params, $type) {
+    transition: $args $params $type;
+    -webkit-transition: $args $params $type;
+    -moz-transition: $args $params $type;
+    -ms-transition: $args $params $type;
+    -o-transition: $args $params $type;
+}
+@mixin TransitionDelay($delay:0) {
+    transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    -ms-transition-delay: $delay;
+    -o-transition-delay: $delay;
+}
+@mixin TransitionDuration($duration:200ms) {
+    transition-duration: $duration;
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    -ms-transition-duration: $duration;
+    -o-transition-duration: $duration;
+}
+@mixin TransitionProperty($property:all) {
+    transition-property: $property;
+    -webkit-transition-property: $property;
+    -moz-transition-property: $property;
+    -ms-transition-property: $property;
+    -o-transition-property: $property;    
+}
+@mixin TransitionTiming($function:ease) {
+    transition-timing-function: $function;
+    -webkit-transition-timing-function: $function;
+    -moz-transition-timing-function: $function;
+    -ms-transition-timing-function: $function;
+    -o-transition-timing-function: $function;  
+}

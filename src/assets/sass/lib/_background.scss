@@ -1,0 +1,26 @@
+// Background Function
+@mixin BackgroundColor($value) {
+    background-color: $value;
+}
+
+@mixin BackgroundImage($image) {
+    background-image: url($image);
+}
+
+@mixin BackgroundRepeat($args) {
+    background-repeat: $args;
+}
+
+@mixin BackgroundSize($args) {
+    background-size: $args;
+}
+
+@mixin BackgroundPosition($args) {
+    background-position: $args;
+}
+@mixin BackgroundPositionX($args) {
+    background-position-x: $args;
+}
+@mixin BackgroundPositionY($args) {
+    background-position-y: $args;
+}
